@@ -1,0 +1,99 @@
+package LinearList;
+
+/**
+ * @Description
+ * @Author 尘
+ * @Date 2024/9/8 19:40
+ */
+public class SqList {
+    public static int MAX_SIZE = 100;
+    private int[] data;
+    private int length;
+    public SqList(){
+        data = new int[MAX_SIZE];
+        length = 0;
+        System.out.println("初始化默认数组成功");
+    }
+    public SqList(int size){
+        if(size<0){
+            data = new int[MAX_SIZE];
+        }else{
+            MAX_SIZE+=size;
+            data = new int[MAX_SIZE];
+        }
+        length = 0;
+        System.out.println("初始化数组成功");
+    }
+
+
+    public boolean addData(int data){
+        if(length >= MAX_SIZE){
+            System.out.println("数组已满");
+            return false;
+        }
+        this.data[++length] = data;
+        System.out.println("添加数据："+data);
+        return true;
+    }
+    public boolean deleteData(int index){
+        if(index < 0 || index >length){
+            System.out.println("索引越界");
+            return false;
+        }
+        int temp=this.data[index];
+        //索引范围0~length-1
+        for(int i=index;i<length-1;i++){
+            this.data[i] = this.data[i+1];
+        }
+        length--;
+        System.out.println("删除索引为"+index+"的数据为："+temp);
+        return true;
+    }
+
+
+    public boolean  insertData(int data,int index) {
+        //若length的值为5，则数组最大索引为4，可以在索引为5的位置插入数据。
+        if(index < 0 || index >  length){
+            System.out.println("索引越界");
+            return false;
+        }
+        if(length >= MAX_SIZE){
+            System.out.println("数组已满");
+            return false;
+        }
+        for(int end=length;end>index;end--){
+            this.data[end]=this.data[end-1];
+        }
+        this.data[index] = data;
+        length++;
+        System.out.println("插入索引为"+index+"的数据为："+data);
+        return true;
+    }
+
+
+    public int getData(int index) {
+        if(index < 0 || index >length){
+            System.out.println("索引越界");
+            return -1;
+        }
+        System.out.println("当前索引为"+index+"的数据为："+data[index]);
+        return data[index];
+    }
+
+    public int getLength() {
+        System.out.println("当前数组长度为："+length);
+        return length;
+    }
+
+    public int locateData(int data) {
+        int index=0;
+        for(int temp:this.data){
+            if(temp==data){
+                return index;
+            }
+            index++;
+        }
+        System.out.println("未找到数据");
+        return -1;
+    }
+}
