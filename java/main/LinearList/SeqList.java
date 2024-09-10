@@ -5,28 +5,28 @@ package LinearList;
  * @Author 尘
  * @Date 2024/9/8 19:40
  */
-public class SqList {
+public class SeqList<T>{
     public static int MAX_SIZE = 100;
-    private int[] data;
+    private T[] data;
     private int length;
-    public SqList(){
-        data = new int[MAX_SIZE];
+    public SeqList(){
+        data = (T[]) new Object[MAX_SIZE];
         length = 0;
         System.out.println("初始化默认数组成功");
     }
-    public SqList(int size){
+    public SeqList(int size){
         if(size<0){
-            data = new int[MAX_SIZE];
+            data =  (T[]) new Object[MAX_SIZE];
         }else{
             MAX_SIZE+=size;
-            data = new int[MAX_SIZE];
+            data =  (T[]) new Object[MAX_SIZE];
         }
         length = 0;
         System.out.println("初始化数组成功");
     }
 
 
-    public boolean addData(int data){
+    public boolean addData(T data){
         if(length >= MAX_SIZE){
             System.out.println("数组已满");
             return false;
@@ -40,7 +40,7 @@ public class SqList {
             System.out.println("索引越界");
             return false;
         }
-        int temp=this.data[index];
+        T temp=this.data[index];
         //索引范围0~length-1
         for(int i=index;i<length-1;i++){
             this.data[i] = this.data[i+1];
@@ -51,7 +51,7 @@ public class SqList {
     }
 
 
-    public boolean  insertData(int data,int index) {
+    public boolean  insertData(T data,int index) {
         //若length的值为5，则数组最大索引为4，可以在索引为5的位置插入数据。
         if(index < 0 || index >  length){
             System.out.println("索引越界");
@@ -71,13 +71,13 @@ public class SqList {
     }
 
 
-    public int getData(int index) {
+    public T getData(int index) {
         if(index < 0 || index >length){
             System.out.println("索引越界");
-            return -1;
+            return null;
         }
         System.out.println("当前索引为"+index+"的数据为："+data[index]);
-        return data[index];
+        return  data[index];
     }
 
     public int getLength() {
@@ -85,9 +85,9 @@ public class SqList {
         return length;
     }
 
-    public int locateData(int data) {
+    public int locateData(T data) {
         int index=0;
-        for(int temp:this.data){
+        for(T temp:this.data){
             if(temp==data){
                 return index;
             }
