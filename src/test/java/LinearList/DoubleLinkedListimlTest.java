@@ -2,18 +2,15 @@ package LinearList;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 /**
  * @Description
  * @Author 尘
- * @Date 2024/9/11 11:06
+ * @Date 2024/9/11 15:04
  */
-class LinkListimlTest {
-
+class DoubleLinkedListimlTest {
     @Test
     void test(){
-        LinkList<Integer> linkList = new LinkListiml<Integer>();
+        DoubleLinkedList<Integer> linkList = new DoubleLinkedListiml<Integer>();
         linkList.insertHeadNode(1);
         linkList.insertHeadNode(2);
         linkList.insertTailNode(3);
@@ -27,4 +24,5 @@ class LinkListimlTest {
         linkList.locateData(4);
 
     }
+
 }

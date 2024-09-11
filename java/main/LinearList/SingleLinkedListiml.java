@@ -3,27 +3,26 @@ package LinearList;
 /**
  * @Description
  * @Author 尘
- * @Date 2024/9/11 10:43
+ * @Date 2024/9/10 14:03
  */
-public class DoubleLinkListiml<T> implements DoubleLinkList<T> {
-
+//一定要写带头结点的链表啊，不然会很麻烦
+//这里实现不带头结点
+//head为null时，java传参会直接传null这个值，对head进行修改时，不会影响head
+public class SingleLinkedListiml<T> implements SingleLinkedList<T> {
     private Node<T> head;
     public static class Node<T>{
         private T data;
-        private Node<T> prior;
         private Node<T> next;
-        Node(T data,Node<T> prior,Node<T> next){
+        Node(T data,Node<T> next){
             this.data = data;
-            this.prior= prior;
             this.next = next;
         }
         Node(T data){
             this.data = data;
-            this.prior= null;
             this.next = null;
         }
     }
-    public DoubleLinkListiml(){
+    public SingleLinkedListiml(){
         //不带头结点
         head =null;
     }
@@ -37,7 +36,7 @@ public class DoubleLinkListiml<T> implements DoubleLinkList<T> {
         while (temp.next != null){
             temp= temp.next;
         }
-        temp.next = new Node<T>(data,temp,null);
+        temp.next = new Node<T>(data);
     }
     @Override
     public  void insertHeadNode(T data){
@@ -45,8 +44,8 @@ public class DoubleLinkListiml<T> implements DoubleLinkList<T> {
             head = new Node<T>(data);
             return;
         }
-        head.prior=new Node<T>(data,null,head);
-        head=head.prior;
+        Node<T> temp = head;
+        head=new Node<T>(data,temp);
     }
     @Override
     public boolean insertNode(T data, int index){
@@ -56,19 +55,17 @@ public class DoubleLinkListiml<T> implements DoubleLinkList<T> {
         }
         //没有头结点，所以如果要插入第一个节点，则直接将head指向新的节点即可
         if(index==0){
-            head.prior=new Node<T>(data,null,head);
-            head=head.prior;
+            Node<T> newNode = new Node<>(data);
+            newNode.next = head;
+            head = newNode;
             return true;
         }
         Node<T> temp = head;
         for(int i=0;i<index-1;i++){
             temp = temp.next;
         }
-        Node<T> newNode = new Node<>(data,temp,temp.next);
-        if(temp.next!=null){
-            temp.next.prior = newNode;
-        }
-
+        Node<T> newNode = new Node<>(data);
+        newNode.next = temp.next;
         temp.next = newNode;
         return true;
     }
@@ -101,7 +98,6 @@ public class DoubleLinkListiml<T> implements DoubleLinkList<T> {
         System.out.println("未找到数据");
         return null;
     }
-
     @Override
     public int getLength() {
         Node<T>  temp = head;
@@ -128,9 +124,6 @@ public class DoubleLinkListiml<T> implements DoubleLinkList<T> {
             temp = temp.next;
         }
         temp.next = temp.next.next;
-        if(temp.next!=null){
-            temp.next.prior = temp;
-        }
         return true;
     }
     @Override
@@ -138,14 +131,9 @@ public class DoubleLinkListiml<T> implements DoubleLinkList<T> {
         Node<T> temp = head;
         while(temp!=null){
             System.out.print(temp.data+" ");
-            if(temp.prior!=null){
-                System.out.print("前置结点值为"+temp.prior.data+" ");
-            }
             temp = temp.next;
         }
         System.out.println();
     }
-
-
 
 }

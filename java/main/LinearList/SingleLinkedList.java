@@ -1,12 +1,12 @@
 package LinearList ;
-import LinearList.LinkListiml.Node;
+import LinearList.SingleLinkedListiml.Node;
 
 /**
  * @Description
  * @Author 尘
  * @Date 2024/9/11 12:04
  */
-public interface LinkList<T>{
+public interface SingleLinkedList<T>{
     boolean deleteNode(int index);
     int getLength();
     Node<T> getNode(int index);

@@ -1,12 +1,12 @@
 package LinearList;
 
-import LinearList.DoubleLinkListiml.Node;
+import LinearList.DoubleLinkedListiml.Node;
 /**
  * @Description
  * @Author 尘
  * @Date 2024/9/11 12:53
  */
-public interface DoubleLinkList<T> {
+public interface DoubleLinkedList<T> {
 
     boolean deleteNode(int index);
     int getLength();
