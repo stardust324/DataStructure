@@ -5,7 +5,7 @@ package LinearList;
  * @Author 尘
  * @Date 2024/9/8 19:40
  */
-public class SeqList<T>{
+public class SeqList<T> implements SeqListInterface<T>{
     public static int MAX_SIZE = 100;
     private T[] data;
     private int length;
