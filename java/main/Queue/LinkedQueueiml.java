@@ -38,6 +38,7 @@ public class LinkedQueueiml <T> implements LinkedQueue<T>{
         if(head!=tail){
             return tail.next.data==null?0:getLength()+1;
         }
+        return 0;
     }
 
     @Override
@@ -53,7 +54,6 @@ public class LinkedQueueiml <T> implements LinkedQueue<T>{
             return head.next.data;
         }
     }
-
     @Override
     public T pop() {
         if(isEmpty()){
