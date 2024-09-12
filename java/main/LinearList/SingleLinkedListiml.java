@@ -2,12 +2,13 @@ package LinearList;
 
 /**
  * @Description
+ * 一定要写带头结点的链表啊，不然会很麻烦
+ * 这里实现不带头结点
+ * head为null时，java传参会直接传null这个值，对head进行修改时，不会影响head
  * @Author 尘
  * @Date 2024/9/10 14:03
  */
-//一定要写带头结点的链表啊，不然会很麻烦
-//这里实现不带头结点
-//head为null时，java传参会直接传null这个值，对head进行修改时，不会影响head
+
 public class SingleLinkedListiml<T> implements SingleLinkedList<T> {
     private Node<T> head;
     public static class Node<T>{
