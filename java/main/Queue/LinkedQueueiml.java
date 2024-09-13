@@ -35,10 +35,13 @@ public class LinkedQueueiml <T> implements LinkedQueue<T>{
 
     @Override
     public int getLength() {
-        if(head!=tail){
-            return tail.next.data==null?0:getLength()+1;
+        Node<T> p=head.next;
+        int i=0;
+        while (p!=null){
+            i++;
+            p=p.next;
         }
-        return 0;
+        return i;
     }
 
     @Override
@@ -69,11 +72,13 @@ public class LinkedQueueiml <T> implements LinkedQueue<T>{
 
     @Override
     public void printData() {
+        System.out.print("队列元素为：");
         Node<T> p=head.next;
         while (p!=null){
             System.out.print(p.data+" ");
             p=p.next;
         }
+        System.out.println();
     }
 
     @Override
