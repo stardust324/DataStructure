@@ -1,6 +1,6 @@
 package LinearList;
 
-import LinearList.DoubleLinkedListiml.Node;
+import LinearList.DoubleLinkedListImpl.Node;
 /**
  * @Description
  * @Author 尘

@@ -5,7 +5,7 @@ package Stack;
  * @Author 尘
  * @Date 2024/9/12 14:18
  */
-public class LinkedStackiml <T> implements LinkedStack<T>{
+public class LinkedStackImpl<T> implements LinkedStack<T>{
     private Node<T> top;
     public static class Node<T>{
         private T data;
@@ -15,7 +15,7 @@ public class LinkedStackiml <T> implements LinkedStack<T>{
             this.next=next;
         }
     }
-    public LinkedStackiml(){
+    public LinkedStackImpl(){
         top=null;
     }
 

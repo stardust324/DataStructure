@@ -1,16 +1,14 @@
 package Queue;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 /**
  * @Description
  * @Author 尘
  * @Date 2024/9/12 21:19
  */
-class CircularQueueimlTest {
+class CircularQueueImplTest {
     @org.junit.jupiter.api.Test
     void test() {
-        CircularQueue<Integer> queue=new CircularQueueiml<>();
+        CircularQueue<Integer> queue=new CircularQueueImpl<>();
         for(int i=0;i<=50;i++){
             queue.push(i);
         }

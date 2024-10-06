@@ -2,17 +2,15 @@ package Queue;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 /**
  * @Description
  * @Author 尘
  * @Date 2024/9/12 17:33
  */
-class SeqQueueimlTest {
+class SeqQueueImplTest {
     @Test
     void test(){
-        SeqQueue<Integer> queue=new SeqQueueiml<>();
+        SeqQueue<Integer> queue=new SeqQueueImpl<>();
         for(int i = 0; i <=50; i++){
             queue.push(i);
         }

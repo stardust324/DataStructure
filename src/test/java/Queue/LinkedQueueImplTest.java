@@ -7,10 +7,10 @@ import static org.junit.jupiter.api.Assertions.*;
  * @Author 尘
  * @Date 2024/9/13 10:53
  */
-class LinkedQueueimlTest {
+class LinkedQueueImplTest {
     @org.junit.jupiter.api.Test
     void teast() {
-        LinkedQueueiml<Integer> queue=new LinkedQueueiml<>();
+        LinkedQueueImpl<Integer> queue=new LinkedQueueImpl<>();
         queue.printData();
         assertTrue(queue.isEmpty());
         for(int i=0;i<10;i++){

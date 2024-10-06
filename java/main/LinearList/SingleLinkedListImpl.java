@@ -9,7 +9,7 @@ package LinearList;
  * @Date 2024/9/10 14:03
  */
 
-public class SingleLinkedListiml<T> implements SingleLinkedList<T> {
+public class SingleLinkedListImpl<T> implements SingleLinkedList<T> {
     private Node<T> head;
     public static class Node<T>{
         private T data;
@@ -23,7 +23,7 @@ public class SingleLinkedListiml<T> implements SingleLinkedList<T> {
             this.next = null;
         }
     }
-    public SingleLinkedListiml(){
+    public SingleLinkedListImpl(){
         //不带头结点
         head =null;
     }

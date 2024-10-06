@@ -1,19 +1,20 @@
 package Stack;
 
-import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
 
 /**
  * @Description
  * @Author 尘
- * @Date 2024/9/12 14:03
+ * @Date 2024/9/12 14:49
  */
-class SeqStackimlTest {
-    @org.junit.jupiter.api.Test
+class LinkedStackImplTest {
+    @Test
     void test() {
-        SeqStack<Integer> stack = new SeqStackiml<>();
+        LinkedStack<Integer> stack = new LinkedStackImpl<>();
         stack.push(1);
         stack.push(2);
         stack.push(3);
+        stack.printData();
         System.out.println("读栈顶元素"+stack.peek());
         stack.printData();
         System.out.println("取栈顶元素"+stack.pop());
@@ -21,7 +22,6 @@ class SeqStackimlTest {
         System.out.println("长度"+stack.getLength());
         stack.clear();
         stack.printData();
-
     }
 
 }

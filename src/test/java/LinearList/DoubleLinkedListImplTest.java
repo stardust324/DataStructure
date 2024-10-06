@@ -7,10 +7,10 @@ import org.junit.jupiter.api.Test;
  * @Author 尘
  * @Date 2024/9/11 15:04
  */
-class DoubleLinkedListimlTest {
+class DoubleLinkedListImplTest {
     @Test
     void test(){
-        DoubleLinkedList<Integer> linkList = new DoubleLinkedListiml<Integer>();
+        DoubleLinkedList<Integer> linkList = new DoubleLinkedListImpl<Integer>();
         linkList.insertHeadNode(1);
         linkList.insertHeadNode(2);
         linkList.insertTailNode(3);

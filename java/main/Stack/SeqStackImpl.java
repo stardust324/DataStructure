@@ -5,16 +5,16 @@ package Stack;
  * @Author 尘
  * @Date 2024/9/12 12:03
  */
-public class SeqStackiml<T> implements SeqStack<T>{
+public class SeqStackImpl<T> implements SeqStack<T>{
     public static int MAX_SIZE=50;
     private T[] data;
     private int top;
 
-    public SeqStackiml() {
+    public SeqStackImpl() {
         this(MAX_SIZE);
     }
 
-    public SeqStackiml(int size) {
+    public SeqStackImpl(int size) {
         MAX_SIZE = size;
         data = (T[]) new Object[MAX_SIZE];
         top = -1;

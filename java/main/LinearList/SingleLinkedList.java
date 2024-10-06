@@ -1,5 +1,5 @@
 package LinearList ;
-import LinearList.SingleLinkedListiml.Node;
+import LinearList.SingleLinkedListImpl.Node;
 
 /**
  * @Description

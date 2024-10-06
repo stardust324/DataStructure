@@ -5,7 +5,7 @@ package Queue;
  * @Author 尘
  * @Date 2024/9/12 21:39
  */
-public class LinkedQueueiml <T> implements LinkedQueue<T>{
+public class LinkedQueueImpl<T> implements LinkedQueue<T>{
 
     private Node<T> head;
     private Node<T> tail;
@@ -23,7 +23,7 @@ public class LinkedQueueiml <T> implements LinkedQueue<T>{
         }
     }
     //带头结点
-    LinkedQueueiml(){
+    LinkedQueueImpl(){
         head=new Node<>(null);
         tail=head;
     }

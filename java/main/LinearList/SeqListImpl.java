@@ -5,16 +5,16 @@ package LinearList;
  * @Author 尘
  * @Date 2024/9/8 19:40
  */
-public class SeqListiml<T> implements SeqList<T> {
+public class SeqListImpl<T> implements SeqList<T> {
     public static int MAX_SIZE = 100;
     private T[] data;
     private int length;
-    public SeqListiml(){
+    public SeqListImpl(){
         data = (T[]) new Object[MAX_SIZE];
         length = 0;
         System.out.println("初始化默认数组成功");
     }
-    public SeqListiml(int size){
+    public SeqListImpl(int size){
         if(size<0){
             data =  (T[]) new Object[MAX_SIZE];
         }else{

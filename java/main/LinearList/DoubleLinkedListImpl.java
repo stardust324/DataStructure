@@ -5,7 +5,7 @@ package LinearList;
  * @Author 尘
  * @Date 2024/9/11 10:43
  */
-public class DoubleLinkedListiml<T> implements DoubleLinkedList<T> {
+public class DoubleLinkedListImpl<T> implements DoubleLinkedList<T> {
 
     private Node<T> head;
     public static class Node<T>{
@@ -23,7 +23,7 @@ public class DoubleLinkedListiml<T> implements DoubleLinkedList<T> {
             this.next = null;
         }
     }
-    public DoubleLinkedListiml(){
+    public DoubleLinkedListImpl(){
         //不带头结点
         head =null;
     }

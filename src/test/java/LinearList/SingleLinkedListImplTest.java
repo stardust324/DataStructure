@@ -7,11 +7,11 @@ import org.junit.jupiter.api.Test;
  * @Author 尘
  * @Date 2024/9/11 11:06
  */
-class SingleLinkedListimlTest {
+class SingleLinkedListImplTest {
 
     @Test
     void test(){
-        SingleLinkedList<Integer> singleLinkedList = new SingleLinkedListiml<Integer>();
+        SingleLinkedList<Integer> singleLinkedList = new SingleLinkedListImpl<Integer>();
         singleLinkedList.insertHeadNode(1);
         singleLinkedList.insertHeadNode(2);
         singleLinkedList.insertTailNode(3);

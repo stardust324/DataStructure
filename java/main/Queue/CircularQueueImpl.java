@@ -5,16 +5,16 @@ package Queue;
  * @Author 尘
  * @Date 2024/9/12 16:48
  */
-public class CircularQueueiml <T> implements CircularQueue<T>{
+public class CircularQueueImpl<T> implements CircularQueue<T>{
 
     public static int MAX_SIZE=50;
     private int head;
     private int tail;
     private T[] data;
-    CircularQueueiml(){
+    CircularQueueImpl(){
         this(MAX_SIZE);
     }
-    CircularQueueiml(int size) {
+    CircularQueueImpl(int size) {
         MAX_SIZE=size;
         data=(T[]) new Object[MAX_SIZE];
         head=tail=0;
