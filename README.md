@@ -6,7 +6,7 @@
 主要内容有：
 - 线性表（Linear list）
 - 栈与队列（Stack and Queue）
-- 数组和广义表（Arrays and generalized tables
+- 数组和广义表（Arrays and generalized tables)
 - 串（String）
 - 树（Tree）
 - 图（Graph）
@@ -14,4 +14,4 @@
 - 查找（Serarch）
 - 内部排序（Internal sort）
 - 外部排序（External sort）
-- 文件（Document
+- 文件（Document)
